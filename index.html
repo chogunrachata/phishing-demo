@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Login</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 100px; }
+        input { display: block; margin: 10px auto; padding: 10px; width: 250px; }
+        button { padding: 10px 20px; background: red; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>Login</h2>
+    <form onsubmit="redirectToCooked(event)">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+    </form>
+
+    <script>
+        function redirectToCooked(event) {
+            event.preventDefault(); // Prevent actual form submission
+            window.location.href = "cooked.html"; // Redirect to next page
+        }
+    </script>
+</body>
+</html>
+
